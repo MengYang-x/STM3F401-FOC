@@ -22,28 +22,37 @@ void OpenVelocity2(float Uq)
     setPhaseVoltage(Uq, 0, el_Angle);
 }
 
-float velocity_Target = 30.0f; // 目标转速
-float velocity_Current;        // 当前转速
+float Set_Velocity = 30.0f; // 目标转速
+float Actual_Velocity;      // 当前转速
+
+PID_Typedef velocity_PID; // 速度环PID配置
+
+// 闭环速度PID控制参数设置
+void Close_Velocity_Init(void)
+{
+    velocity_PID.Kp = -0.1f;
+    velocity_PID.Ki = -1.0f;
+    velocity_PID.Kd = 0.0f;
+    velocity_PID.Ts = 0.001f;
+    velocity_PID.Umax = 3.0f;
+    PID_Init(&velocity_PID, velocity_PID.Kp, velocity_PID.Ki, velocity_PID.Kd, velocity_PID.Umax, velocity_PID.Ts);
+}
 
 // 闭环速度控制
 void CloseVelocity(void)
 {
     float el_Angle; // 当前电角度
 
-    PID_Init(-0.1f, -1.2f, 0.0f);
-
     MT6701_GetElectricalAngle(&el_Angle);
-    MT6701_GetVelocity(&velocity_Current);
-    LowPassFilter(&velocity_Current); // 对当前转速进行滤波处理
+    MT6701_GetVelocity(&Actual_Velocity);
+    LowPassFilter(&Actual_Velocity); // 对当前转速进行滤波处理
 
-    float error = velocity_Target - velocity_Current; // 目标转速 - 滤波后的转速
-
-    float Uq = PIDCalculate(error);
+    float Uq = PIDCalculate(&velocity_PID, Set_Velocity, Actual_Velocity);
     setPhaseVoltage(Uq, 0.0f, el_Angle);
 }
 
 // 串口输出目标转速，实际转速
 void FOC_velocity_Log(void)
 {
-    FOC_log("[vel_T,vel_C]:%f,%f\r\n", velocity_Target, velocity_Current);
+    FOC_log("[SetValue,ActualValue,Error]:%f,%f,%f\r\n", Set_Velocity, Actual_Velocity,Set_Velocity-Actual_Velocity);
 }
