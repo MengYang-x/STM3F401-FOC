@@ -3,8 +3,6 @@
  */
 #include "math_utils.h"
 
-const float _2PI = 6.28318530717958f;
-
 // normalizing radian angle to [0, 2pi]
 float _normalizeAngle(float angle)
 {

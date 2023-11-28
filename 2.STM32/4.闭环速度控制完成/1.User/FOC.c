@@ -32,12 +32,13 @@ void Set_PWM(float _CCR1, float _CCR2, float _CCR3)
 // FOC核心函数：输入Uq、Ud和电角度，输出三路PWM
 void setPhaseVoltage(float Uq, float Ud, float angle_el)
 {
+	Uq = _constraint(Uq, -5.0f, 5.0f);
+	// angle_el = _normalizeAngle(angle_el); // 使用MT6701计算电角度时，已限制角度范围
+	
 	static float Ts = 1.0f;
 	float Ta, Tb, Tc;
 	float t1, t2, t3, t4, t5, t6, t7;
 	float sum, k_svpwm;
-
-	angle_el = _normalizeAngle(angle_el);
 
 	// Park逆变换
 	float U_alpha = -Uq * arm_sin_f32(angle_el) + Ud * arm_cos_f32(angle_el);

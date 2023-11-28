@@ -3,16 +3,16 @@
         {
             "name": "FOCStudy",
             "includePath": [
-                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_2.0\\Core\\Inc",
-                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_2.0\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
-                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_2.0\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
-                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_2.0\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
-                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_2.0\\Drivers\\CMSIS\\Include",
-                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_2.0\\1.User",
-                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_2.0\\2.DSP",
-                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_2.0\\MDK-ARM",
-                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_2.0\\Core\\Src",
-                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_2.0\\Drivers\\STM32F4xx_HAL_Driver\\Src"
+                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_4.0\\Core\\Inc",
+                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_4.0\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
+                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_4.0\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
+                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_4.0\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
+                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_4.0\\Drivers\\CMSIS\\Include",
+                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_4.0\\1.User",
+                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_4.0\\2.DSP",
+                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_4.0\\MDK-ARM",
+                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_4.0\\Core\\Src",
+                "g:\\3.User\\1.项目研究\\2.FOC控制算法\\2.STM32Project\\FOCStudy_4.0\\Drivers\\STM32F4xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

@@ -12,6 +12,7 @@
         "math_utils.h": "c",
         "math.h": "c",
         "mt6701.h": "c",
-        "pid.h": "c"
+        "pid.h": "c",
+        "stdint.h": "c"
     }
 }
