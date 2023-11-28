@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "arm_math.h": "c",
+        "foc.h": "c",
+        "motor.h": "c",
+        "main.h": "c",
+        "stm32f4xx_hal.h": "c",
+        "spi.h": "c",
+        "math_utils.h": "c",
+        "math.h": "c",
+        "mt6701.h": "c",
+        "pid.h": "c",
+        "stdint.h": "c"
+    }
+}
